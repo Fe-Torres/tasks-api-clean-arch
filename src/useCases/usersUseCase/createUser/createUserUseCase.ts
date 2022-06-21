@@ -8,12 +8,12 @@ export class CreateUserUseCase {
   ) {}
 
   async execute (userData: IUserRequestDTO) {
-    const userAlreadyExists = await this.usersRepository.findByEmail(userData.email)
+    const user = new User(userData.name, userData.email, userData.password)
+    const userAlreadyExists = await this.usersRepository.findByEmail(user.email)
+    console.log(userAlreadyExists)
     if (userAlreadyExists) {
       throw new Error('User already exists.')
     }
-
-    const user = new User('', '', '', '')
 
     await this.usersRepository.save(user)
   }

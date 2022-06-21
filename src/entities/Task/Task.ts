@@ -1,5 +1,3 @@
-import { uuid } from 'uuidv4'
-
 export class Task {
   public readonly id: string
 
@@ -13,8 +11,5 @@ export class Task {
     this.description = description
     this.isDone = isDone
     this.userId = userId
-    if (!id) {
-      this.id = uuid()
-    }
   }
 }

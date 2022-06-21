@@ -2,10 +2,10 @@ import { MongoUsersRepository } from '../repositories/implementations/MongoUsers
 import { CreateUserUseCase } from './usersUseCase/createUser/createUserUseCase'
 import { CreateUserController } from '../adapters/http/controllers/CreateUserController'
 
-const postgresUsersRepository = new MongoUsersRepository()
+const mongoUsersRepository = new MongoUsersRepository()
 
 const createUserUseCase = new CreateUserUseCase(
-  postgresUsersRepository
+  mongoUsersRepository
 )
 
 const createUserController = new CreateUserController(
