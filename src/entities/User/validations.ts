@@ -24,6 +24,9 @@ export class UserValidation {
   }
 
   static validationPassword (password: string): boolean {
+    if (!password) {
+      return false
+    }
     if (password.length < 6) return false
     return true
   }
