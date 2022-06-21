@@ -1,9 +1,20 @@
 import express from 'express'
 import { router } from '../routes/routes'
 
-const app = express()
+export class App {
+  public server: express.Application
 
-app.use(express.json())
-app.use(router)
+  constructor () {
+    this.server = express()
+    this.middleware()
+    this.router()
+  }
 
-export { app }
+  private middleware () {
+    this.server.use(express.json())
+  }
+
+  private router () {
+    this.server.use(router)
+  }
+}
