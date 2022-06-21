@@ -5,7 +5,7 @@
 [x] Ajustar arquitetura seguindo o clean arch
 
 [x] Construir as entidades
-
+[] Construir o servidor rest
 [] Criar os casos de uso dos usuários
     [] Cadastrar usuário
     [] Login
@@ -18,11 +18,11 @@
     [] Editar uma tarefa
     [] Apagar uma tarefa
 
-[] Implementar o servidor rest
+[x] Implementar o servidor rest
 
-[] Implementar o mongo
+[x] Implementar o mongo
 
-[] Construir o index/main para realizar o acoplamento dos usecases e repositories
+[x] Construir o index/main para realizar o acoplamento dos usecases e repositories
 
 [] Criar testes para as entidades
 
