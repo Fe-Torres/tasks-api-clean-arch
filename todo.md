@@ -28,6 +28,5 @@
 
 [] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
 
-[]
 
 ```

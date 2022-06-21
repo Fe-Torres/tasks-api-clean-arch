@@ -1,5 +1,5 @@
-import { MongoUsersRepository } from '../repositories/userRepository/implementations/PostgresUsersRepository'
-import { CreateUserUseCase } from './usersUseCase/CreateUser/CreateUserUseCase'
+import { MongoUsersRepository } from '../repositories/implementations/MongoUsersRepository'
+import { CreateUserUseCase } from './usersUseCase/createUser/createUserUseCase'
 import { CreateUserController } from '../adapters/http/controllers/CreateUserController'
 
 const postgresUsersRepository = new MongoUsersRepository()
