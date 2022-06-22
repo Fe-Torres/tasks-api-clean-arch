@@ -7,9 +7,7 @@ if (!process.env.PORT) {
   process.exit(1)
 }
 
-// eslint-disable-next-line no-new
-new MongoConnection(process.env.MONGO_URI)
-
+MongoConnection.createConnection(process.env.MONGO_URI)
 new App().server.listen(process.env.PORT, () => {
   console.log(`Server listening on port: ${process.env.PORT}`)
 })

@@ -9,7 +9,6 @@ export class RefreshTokenController {
   async handle (request: Request, response: Response): Promise<Response> {
     const { refreshToken } = request.body
     try {
-      // adicionar validação com joi depois
       const token = await this.refreshTokenUseCase.execute(
         refreshToken
       )

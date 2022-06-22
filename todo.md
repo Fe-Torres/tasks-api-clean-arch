@@ -3,10 +3,10 @@
 [x] ESLint, Husky e Lint-Staged
 [x] Ajustar arquitetura seguindo o clean arch
 [x] Construir as entidades
-[] Criar os casos de uso dos usuários
+[x] Criar os casos de uso dos usuários
     [x] Cadastrar usuário
     [x] Login
-    [] Endpoint de refresh token
+    [x] Endpoint de refresh token
 
 [x] Criar os casos de uso das tarefas
     [x] Criar nova tarefa

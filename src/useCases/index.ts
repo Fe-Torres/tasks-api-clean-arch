@@ -14,6 +14,8 @@ import { DeleteTaskUseCase } from './tasksUseCase/deleteTask/deleteTaskUseCase'
 import { DeleteTaskController } from '../adapters/http/controllers/taskController/DeleteTaskController'
 import { UpdateTaskUseCase } from './tasksUseCase/updateTask/updateTaskUseCase'
 import { UpdateTaskController } from '../adapters/http/controllers/taskController/UpdateTaskController'
+import { RefreshTokenController } from '../adapters/http/controllers/authController/RefreshTokenController'
+import { RefreshTokenUseCase } from './authUseCase/refreshToken/refreshTokenUseCase'
 
 const mongoUsersRepository = new MongoUsersRepository()
 const mongoTasksRepository = new MongoTasksRepository()
@@ -29,6 +31,7 @@ const updateTaskUseCase = new UpdateTaskUseCase(mongoTasksRepository)
 
 const createUserController = new CreateUserController(createUserUseCase)
 const authUserController = new AuthUserController(authUserUseCase)
+const refreshTokenController = new RefreshTokenController(new RefreshTokenUseCase())
 
 const createTaskController = new CreateTaskController(createTaskUseCase)
 const getAllTasksByUserController = new GetAllTasksController(getAllTasksByUserUseCase)
@@ -36,4 +39,4 @@ const getTaskByIdController = new GetTaskByIdController(getTaskByIdUseCase)
 const deleteTaskController = new DeleteTaskController(deleteTaskUseCase)
 const updateTaskController = new UpdateTaskController(updateTaskUseCase)
 
-export { authUserController, createUserController, createTaskController, getAllTasksByUserController, getTaskByIdController, deleteTaskController, updateTaskController }
+export { authUserController, createUserController, createTaskController, getAllTasksByUserController, getTaskByIdController, deleteTaskController, updateTaskController, refreshTokenController }
