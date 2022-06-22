@@ -1,3 +1,4 @@
+import { uuid } from 'uuidv4'
 import { UserValidation } from './validations'
 
 export class User {
@@ -11,6 +12,9 @@ export class User {
     this.name = name
     this.email = email
     this.password = password
+    if (!id) {
+      this.id = uuid()
+    }
     if (!UserValidation.validationEmail(email)) {
       throw new Error(`Invalid e-mail: '${email}' `)
     }

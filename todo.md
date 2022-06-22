@@ -7,8 +7,8 @@
 [x] Construir as entidades
 [] Construir o servidor rest
 [] Criar os casos de uso dos usuários
-    [] Cadastrar usuário
-    [] Login
+    [x] Cadastrar usuário
+    [x] Login
     [] Endpoint de refresh token
 
 [] Criar os casos de uso das tarefas
@@ -25,7 +25,7 @@
 [x] Construir o index/main para realizar o acoplamento dos usecases e repositories
 
 [] Criar testes para as entidades
-
+[] Adicionar validação com JOI
 [] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
 
 

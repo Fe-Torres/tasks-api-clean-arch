@@ -3,7 +3,11 @@ import mongoose, {
 } from 'mongoose'
 
 export const UserSchema = new Schema({
-  id: { type: mongoose.Schema.Types.ObjectId, required: false },
+  id: {
+    type: String,
+    unique: true,
+    required: true
+  },
   email: { type: String, required: true, notNull: true },
   password: { type: String, required: true, notNull: true }
 })

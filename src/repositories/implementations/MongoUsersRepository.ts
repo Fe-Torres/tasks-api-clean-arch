@@ -10,7 +10,7 @@ export class MongoUsersRepository implements IUsersRepository {
     })
   }
 
-  async findByEmail (email: string): Promise<any> {
+  async findByEmail (email: string): Promise<undefined | User> {
     return await UserModel.findOne({
       email
     })
