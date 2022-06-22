@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { RefreshTokenUseCase } from '../../../useCases/authUseCase/refreshToken/refreshTokenUseCase'
+import { RefreshTokenUseCase } from '../../../../useCases/authUseCase/refreshToken/refreshTokenUseCase'
 
 export class RefreshTokenController {
   constructor (

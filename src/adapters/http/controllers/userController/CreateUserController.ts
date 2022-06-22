@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
-import { CreateUserUseCase } from '../../../useCases/usersUseCase/createUser/createUserUseCase'
+import { IUserRequestDTO } from '../../../../useCases/usersUseCase/createUser/createUserDTO'
+import { CreateUserUseCase } from '../../../../useCases/usersUseCase/createUser/createUserUseCase'
 
 export class CreateUserController {
   constructor (
@@ -7,14 +8,10 @@ export class CreateUserController {
   ) { }
 
   async handle (request: Request, response: Response): Promise<Response> {
-    const { name, email, password } = request.body
+    const userRequest:IUserRequestDTO = request.body
     try {
       // adicionar validação com joi depois
-      await this.createUserUseCase.execute({
-        name,
-        email,
-        password
-      })
+      await this.createUserUseCase.execute(userRequest)
       return response.status(201).send()
     } catch (err) {
       return response.status(400).json({

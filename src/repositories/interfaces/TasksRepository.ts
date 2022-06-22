@@ -2,8 +2,8 @@ import { Task } from '../../entities/Task/Task'
 
 export interface ITasksRepository {
     save(task: Task): Promise<void | Error>
-    findById(id: string): Promise<Task | Error>
-    index(userId: string): Promise<Task[] | Error>
-    update(task: Partial<Task>, userId: string): Promise<Task | Error>
-    delete(taskId: string, userId: string): Promise<Task | Error>
+    findById(taskId: string, userId: string): Promise<unknown>
+    index(userId: string): Promise<unknown>
+    update(task: Partial<Task>, userId: string): Promise<void>
+    delete(taskId: string, userId: string): Promise<void>
 }

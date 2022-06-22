@@ -12,11 +12,11 @@
     [] Endpoint de refresh token
 
 [] Criar os casos de uso das tarefas
-    [] Criar nova tarefa
-    [] Listar todas as tarefas
-    [] Listar tarefa específica
+    [x] Criar nova tarefa
+    [x] Listar todas as tarefas
+    [x] Listar tarefa específica
     [] Editar uma tarefa
-    [] Apagar uma tarefa
+    [x] Apagar uma tarefa
 
 [x] Implementar o servidor rest
 

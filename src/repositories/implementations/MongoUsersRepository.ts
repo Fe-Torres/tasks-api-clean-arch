@@ -5,9 +5,7 @@ import UserModel from '../mongodb/models/UserModel'
 export class MongoUsersRepository implements IUsersRepository {
   async save (user: User): Promise<void> {
     const userModel = new UserModel(user)
-    return await userModel.save((error: any, result: any) => {
-      if (error) throw new Error(error.message)
-    })
+    await userModel.save()
   }
 
   async findByEmail (email: string): Promise<undefined | User> {
