@@ -11,7 +11,7 @@ export class DeleteTaskController {
     const userId = request.headers.userID
     try {
       await this.deleteTaskUseCase.execute(id, userId as string)
-      return response.status(200).send()
+      return response.status(204).send()
     } catch (err) {
       return response.status(400).json({
         message: err.message || 'Unexpected error.'

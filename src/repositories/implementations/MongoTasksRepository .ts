@@ -19,12 +19,13 @@ export class MongoTasksRepository implements ITasksRepository {
     return tasks
   }
 
-  update (task: Partial<Task>, userId: string): Promise<void> {
-    throw new Error('Method not implemented.')
+  async update (task: Partial<Task>): Promise<void> {
+    const result = await TaskModel.findOneAndUpdate({ id: task.id, userId: task.userId }, task).select({ _id: 0, __v: 0 })
+    if (!result) throw new Error('Task not found')
   }
 
   async delete (taskId: string, userId: string): Promise<void> {
-    const result = await TaskModel.findOneAndDelete({ id: taskId, userId }).select({ _id: 0, __v: 0 })
+    const result = await TaskModel.findOneAndDelete({ id: taskId, userId })
     if (!result) throw new Error('Task not found')
   }
 };

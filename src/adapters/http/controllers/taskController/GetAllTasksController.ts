@@ -10,7 +10,7 @@ export class GetAllTasksController {
     const userId = request.headers.userID
     try {
       const tasks = await this.getAllTasksByUserUseCase.execute(userId as string)
-      return response.status(201).send({ tasks })
+      return response.status(200).send({ tasks })
     } catch (err) {
       return response.status(400).json({
         message: err.message || 'Unexpected error.'

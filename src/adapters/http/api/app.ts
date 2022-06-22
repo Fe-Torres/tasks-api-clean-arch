@@ -1,5 +1,6 @@
 import express from 'express'
-import { router } from '../routes/routes'
+import { taskRoutes } from '../routes/taskRoutes'
+import { userRoutes } from '../routes/userRoutes'
 
 export class App {
   public server: express.Application
@@ -15,6 +16,7 @@ export class App {
   }
 
   private router () {
-    this.server.use(router)
+    this.server.use(userRoutes)
+    this.server.use(taskRoutes)
   }
 }

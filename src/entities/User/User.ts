@@ -12,9 +12,8 @@ export class User {
     this.name = name
     this.email = email
     this.password = password
-    if (!id) {
-      this.id = uuid()
-    }
+    this.id = !id ? uuid() : id
+
     if (!UserValidation.validationEmail(email)) {
       throw new Error(`Invalid e-mail: '${email}' `)
     }
