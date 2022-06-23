@@ -15,7 +15,7 @@ export class User {
     this.id = !id ? uuid() : id
 
     if (!UserValidation.validationEmail(email)) {
-      throw new Error(`Invalid e-mail: '${email}' `)
+      throw new Error(`Invalid e-mail: '${email}'`)
     }
     if (!UserValidation.validationPassword(password)) {
       throw new Error('Invalid password - Must contain 6 characters or more')

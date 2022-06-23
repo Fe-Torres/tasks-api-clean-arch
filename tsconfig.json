@@ -8,6 +8,7 @@
     "forceConsistentCasingInFileNames": true  
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "tests/**/**/*.spec.ts"  
   ]
 }

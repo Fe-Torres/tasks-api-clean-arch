@@ -15,6 +15,6 @@ export class CreateUserUseCase {
       throw new Error('User already exists.')
     }
     user.password = await UserPassword.encryptPassword(user.password)
-    await this.usersRepository.save(user)
+    return await this.usersRepository.save(user)
   }
 }
