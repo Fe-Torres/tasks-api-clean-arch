@@ -1,6 +1,6 @@
 import { ITasksRepository } from '../../../repositories/interfaces/TasksRepository'
 
-export class GetByIdTaskUseCase {
+export class FindByIdTaskUseCase {
   constructor (
     private taskRepository: ITasksRepository
   ) {}

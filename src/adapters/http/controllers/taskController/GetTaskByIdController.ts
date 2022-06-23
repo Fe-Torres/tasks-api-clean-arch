@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
-import { GetByIdTaskUseCase } from '../../../../useCases/tasksUseCase/findByIdTask/getByIdTaskUseCase'
+import { FindByIdTaskUseCase } from '../../../../useCases/tasksUseCase/findByIdTask/findByIdTaskUseCase'
 
 export class GetTaskByIdController {
   constructor (
-    private getTaskByIdUseCase: GetByIdTaskUseCase
+    private getTaskByIdUseCase: FindByIdTaskUseCase
   ) { }
 
   async handle (request: Request, response: Response): Promise<Response> {

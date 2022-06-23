@@ -8,7 +8,7 @@ import { CreateTaskController } from '../adapters/http/controllers/taskControlle
 import { AuthUserController } from '../adapters/http/controllers/authController/AuthUserController'
 import { GetAllTasksByUserUseCase } from './tasksUseCase/getAllTasksbyUser/getAllTasksUseCaseByUser'
 import { GetAllTasksController } from '../adapters/http/controllers/taskController/GetAllTasksController'
-import { GetByIdTaskUseCase } from './tasksUseCase/findByIdTask/getByIdTaskUseCase'
+import { FindByIdTaskUseCase } from './tasksUseCase/findByIdTask/findByIdTaskUseCase'
 import { GetTaskByIdController } from '../adapters/http/controllers/taskController/GetTaskByIdController'
 import { DeleteTaskUseCase } from './tasksUseCase/deleteTask/deleteTaskUseCase'
 import { DeleteTaskController } from '../adapters/http/controllers/taskController/DeleteTaskController'
@@ -25,7 +25,7 @@ const authUserUseCase = new AuthUserUseCase(mongoUsersRepository)
 
 const createTaskUseCase = new CreateTaskUseCase(mongoTasksRepository)
 const getAllTasksByUserUseCase = new GetAllTasksByUserUseCase(mongoTasksRepository)
-const getTaskByIdUseCase = new GetByIdTaskUseCase(mongoTasksRepository)
+const findTaskByIdUseCase = new FindByIdTaskUseCase(mongoTasksRepository)
 const deleteTaskUseCase = new DeleteTaskUseCase(mongoTasksRepository)
 const updateTaskUseCase = new UpdateTaskUseCase(mongoTasksRepository)
 
@@ -35,8 +35,8 @@ const refreshTokenController = new RefreshTokenController(new RefreshTokenUseCas
 
 const createTaskController = new CreateTaskController(createTaskUseCase)
 const getAllTasksByUserController = new GetAllTasksController(getAllTasksByUserUseCase)
-const getTaskByIdController = new GetTaskByIdController(getTaskByIdUseCase)
+const findTaskByIdController = new GetTaskByIdController(findTaskByIdUseCase)
 const deleteTaskController = new DeleteTaskController(deleteTaskUseCase)
 const updateTaskController = new UpdateTaskController(updateTaskUseCase)
 
-export { authUserController, createUserController, createTaskController, getAllTasksByUserController, getTaskByIdController, deleteTaskController, updateTaskController, refreshTokenController }
+export { authUserController, createUserController, createTaskController, getAllTasksByUserController, findTaskByIdController, deleteTaskController, updateTaskController, refreshTokenController }

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { createTaskController, deleteTaskController, getAllTasksByUserController, getTaskByIdController, updateTaskController } from '../../../useCases'
+import { createTaskController, deleteTaskController, getAllTasksByUserController, findTaskByIdController, updateTaskController } from '../../../useCases'
 import { AuthMiddleware } from './middlewares/middleware'
 
 const taskRoutes = Router()
@@ -12,7 +12,7 @@ taskRoutes.get('/task', AuthMiddleware, (request, response) => {
   return getAllTasksByUserController.handle(request, response)
 })
 taskRoutes.get('/task/:id', AuthMiddleware, (request, response) => {
-  return getTaskByIdController.handle(request, response)
+  return findTaskByIdController.handle(request, response)
 })
 taskRoutes.delete('/task/:id', AuthMiddleware, (request, response) => {
   return deleteTaskController.handle(request, response)

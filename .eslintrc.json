@@ -16,5 +16,13 @@
     ],
     "rules": {
         "no-useless-constructor":"off"
+    },
+   "overrides": [
+    {
+        "files": [ "*.spec.ts" ],
+        "rules": {
+          "no-undef": 0
+        }
     }
+   ] 
 }
