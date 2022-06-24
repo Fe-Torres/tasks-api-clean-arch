@@ -22,8 +22,8 @@
 
 
 4 Trimestre
-[] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
-[] Criar testes para o middleware
+[x] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
+[x] Criar testes para o middleware
 [] Criar a pipeline no Github Actions
     [] instalação das dependências
     [] Build do projeto

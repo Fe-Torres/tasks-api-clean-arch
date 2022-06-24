@@ -8,7 +8,9 @@
     "lint:fix": "yarn eslint 'src/**' --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "find-deadcode":"if (yarn ts-prune -e); then echo 'No deadcode found'; else echo 'Deadcode found'; fi"
+  
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -39,6 +41,7 @@
     "supertest": "^6.2.2",
     "ts-jest": "^28.0.5",
     "ts-node-dev": "^1.0.0-pre.56",
+    "ts-prune": "^0.10.3",
     "typescript": "^4.3.0"
   },
   "lint-staged": {

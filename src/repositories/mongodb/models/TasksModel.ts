@@ -2,7 +2,7 @@ import mongoose, {
   Schema
 } from 'mongoose'
 
-export const TaskSchema = new Schema({
+const TaskSchema = new Schema({
   id: { type: String, unique: true, required: true, notNull: true },
   title: { type: String, required: true, notNull: true },
   description: { type: String, required: false, notNull: false },

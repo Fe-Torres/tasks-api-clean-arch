@@ -2,7 +2,7 @@ import mongoose, {
   Schema
 } from 'mongoose'
 
-export const UserSchema = new Schema({
+const UserSchema = new Schema({
   id: {
     type: String,
     unique: true,

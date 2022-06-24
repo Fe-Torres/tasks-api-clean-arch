@@ -3,12 +3,7 @@ import { ITaskRequestDTO } from '../../../../src/useCases/tasksUseCase/createTas
 import { ITasksRepository } from '../../../../src/repositories/interfaces/TasksRepository'
 import { Error } from 'mongoose'
 
-export const taskMock: ITaskRequestDTO = {
-  title: 'Pular fogueira',
-  description: 'Dia 24 e dia 25!',
-  userId: '1'
-}
-export const tasksArrayMock: ITaskRequestDTO[] = [
+const tasksArrayMock: ITaskRequestDTO[] = [
   {
     title: 'Pular fogueira',
     description: 'Dia 24 e dia 25!',
@@ -25,6 +20,13 @@ export const tasksArrayMock: ITaskRequestDTO[] = [
     userId: '1'
   }
 ]
+
+export const taskMock: ITaskRequestDTO = {
+  title: 'Pular fogueira',
+  description: 'Dia 24 e dia 25!',
+  userId: '1'
+}
+
 export const taskRepositoryMock: ITasksRepository = {
   save: jest.fn(),
   findById: jest.fn().mockReturnValue(taskMock),
