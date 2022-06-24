@@ -33,7 +33,7 @@
 
 Bonus
 [] Adicionar validação com JOI
-[] Criar testes para as entidades
+[] Aumentar a cobertura dos testes
 [] Explorar mais o Github Actions (Tentar fazer um deploy no heroku)
 
 ```
