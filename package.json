@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/adapters/http/api/server.ts",
+    "build": "tsc --build",
     "lint:fix": "yarn eslint 'src/**' --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
