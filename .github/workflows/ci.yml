@@ -23,8 +23,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     # ./Setup do job 
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm run test
-    - run: npm run find-deadcode
-    - run: npm run lint-staged
+    - run: yarn install
+    - run: yarn build
+    - run: yarn test
+    - run: yarn find-deadcode
+    - run: yarn lint-staged
