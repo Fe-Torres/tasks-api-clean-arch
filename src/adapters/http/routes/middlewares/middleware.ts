@@ -11,7 +11,7 @@ export function AuthMiddleware (request: Request, response: Response, next: Next
   const { authorization } = request.headers
 
   if (!authorization) {
-    return response.status(401).json({ message: 'Token is missing', status_code: 401 })
+    return response.status(401).json({ message: 'token is missing', status_code: 401 })
   }
 
   const token = authorization.replace('Bearer', '').trim()

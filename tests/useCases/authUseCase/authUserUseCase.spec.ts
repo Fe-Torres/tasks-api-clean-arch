@@ -1,11 +1,12 @@
 import { AuthUserUseCase } from '../../../src/useCases/authUseCase/authUser/authUserUseCase'
+import { IToken } from '../../../src/useCases/authUseCase/authUser/interface'
 import { userMockInvalidEmail } from '../userUseCase/mocks/userMocks'
 import { loginData, userRepositoryMockWithoutUser, userRepositoryMockWithUser } from './mocks/authMocks'
 
 describe('auth user example ', () => {
   const authUserUseCase = new AuthUserUseCase(userRepositoryMockWithUser)
   test('shoud be able to authenticate user', async () => {
-    const token = await authUserUseCase.execute(loginData.email, loginData.password)
+    const token: IToken = await authUserUseCase.execute(loginData.email, loginData.password)
     expect(token).toHaveProperty('accessToken')
     expect(token).toHaveProperty('refreshToken')
   })

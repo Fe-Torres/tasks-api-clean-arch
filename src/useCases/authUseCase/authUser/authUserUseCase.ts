@@ -3,14 +3,14 @@ import { IUsersRepository } from '../../../repositories/interfaces/UserRepositor
 import { UserPassword } from '../../../entities/User/password'
 import { UserValidation } from '../../../entities/User/validations'
 import jwt from 'jsonwebtoken'
-import { Token } from './interface'
+import { IToken } from './interface'
 
 export class AuthUserUseCase {
   constructor (
     private usersRepository: IUsersRepository
   ) { }
 
-  async execute (email: string, password: string): Promise<Token | Error> {
+  async execute (email: string, password: string): Promise<IToken> {
     if (!UserValidation.validationEmail(email)) throw new Error('Invalid e-mail.')
     if (!UserValidation.validationPassword(password)) throw new Error('Invalid password - Must contain 6 characters or more.')
     const userAlreadyExists = await this.usersRepository.findByEmail(email)
