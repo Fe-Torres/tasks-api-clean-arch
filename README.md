@@ -30,6 +30,7 @@ $ npm run start
 
   1. Caso queira testar no insominia, deixei o arquivo das collections no projeto (nome do arquivo: insomnia_collection.json).
   2. Para realizar acesso nas rotas protegidas por autenticação, basta criar um usuário, fazer login e utilizar o acces_token na variavél de ambiente "token" do insominia.
+  3. Node-Version: 18.3.0
 
 ### Testes
 
