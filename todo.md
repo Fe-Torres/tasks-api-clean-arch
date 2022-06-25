@@ -24,6 +24,7 @@
 
 
 4º Trimestre
+
 [x] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
 [x] Criar testes para o middleware
 [x] Criar a pipeline no Github Actions
