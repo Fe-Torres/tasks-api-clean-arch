@@ -1,5 +1,7 @@
 ```
-3 Trimestre
+
+3º Trimestre
+
 [x] ESLint, Husky e Lint-Staged
 [x] Ajustar arquitetura seguindo o clean arch
 [x] Construir as entidades
@@ -21,19 +23,22 @@
 
 
 
-4 Trimestre
+4º Trimestre
 [x] Criar testes para os casos de uso (Regras de negócios) mockando o banco de dados
 [x] Criar testes para o middleware
-[] Criar a pipeline no Github Actions
-    [] instalação das dependências
-    [] Build do projeto
-    [] Checagem dos testes
-    [] Checagem de lint
-    [] Checagem do ts-prune
+[x] Criar a pipeline no Github Actions
+    [x] instalação das dependências
+    [x] Build do projeto
+    [x] Checagem dos testes
+    [x] Checagem de lint
+    [x] Checagem do ts-prune
 
 Bonus
-[] Adicionar validação com JOI
-[] Aumentar a cobertura dos testes
-[] Explorar mais o Github Actions (Tentar fazer um deploy no heroku)
-
+[] Adicionar validação com JOI;
+[] Adicionar filtros na rota de index
+[] Adicionar o Swagger para documentação da API;
+[] Adicionar data nas tasks e realizar filtros pelas datas com o mongo;
+[] Aumentar a cobertura dos testes;
+[] Explorar mais o Github Actions (Tentar fazer um deploy no heroku);
+[] Trocar as chamadas do Mongo para Callbacks e trabalhar com elas sem quebrar a aplicação
 ```
