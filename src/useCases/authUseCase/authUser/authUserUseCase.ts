@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { IUsersRepository } from '../../../repositories/interfaces/UserRepository'
+import { IUsersRepository } from '../../../repositories/interfaces/userRepository'
 import { UserPassword } from '../../../entities/User/password'
 import { UserValidation } from '../../../entities/User/validations'
 import jwt from 'jsonwebtoken'

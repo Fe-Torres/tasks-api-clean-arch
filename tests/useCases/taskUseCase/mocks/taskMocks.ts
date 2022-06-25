@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { ITaskRequestDTO } from '../../../../src/useCases/tasksUseCase/createTask/createTaskDTO'
-import { ITasksRepository } from '../../../../src/repositories/interfaces/TasksRepository'
+import { ITasksRepository } from '../../../../src/repositories/interfaces/tasksRepository'
 import { Error } from 'mongoose'
 
 const tasksArrayMock: ITaskRequestDTO[] = [

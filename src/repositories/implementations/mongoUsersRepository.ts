@@ -1,4 +1,4 @@
-import { IUsersRepository } from '../interfaces/UserRepository'
+import { IUsersRepository } from '../interfaces/userRepository'
 import { User } from '../../entities/User/User'
 import UserModel from '../mongodb/models/UserModel'
 

@@ -1,5 +1,5 @@
 import { Task } from '../../entities/Task/Task'
-import { ITasksRepository } from '../interfaces/TasksRepository'
+import { ITasksRepository } from '../interfaces/tasksRepository'
 import TaskModel from '../mongodb/models/TasksModel'
 
 export class MongoTasksRepository implements ITasksRepository {

@@ -1,4 +1,4 @@
-import { ITasksRepository } from '../../../repositories/interfaces/TasksRepository'
+import { ITasksRepository } from '../../../repositories/interfaces/tasksRepository'
 
 export class FindByIdTaskUseCase {
   constructor (

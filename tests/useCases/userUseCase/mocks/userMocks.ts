@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { IUsersRepository } from '../../../../src/repositories/interfaces/UserRepository'
+import { IUsersRepository } from '../../../../src/repositories/interfaces/userRepository'
 import { IUserRequestDTO } from '../../../../src/useCases/usersUseCase/createUser/createUserDTO'
 
 export const userMock: IUserRequestDTO = {

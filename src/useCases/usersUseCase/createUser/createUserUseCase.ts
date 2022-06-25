@@ -1,4 +1,4 @@
-import { IUsersRepository } from '../../../repositories/interfaces/UserRepository'
+import { IUsersRepository } from '../../../repositories/interfaces/userRepository'
 import { User } from '../../../entities/User/User'
 import { IUserRequestDTO } from './createUserDTO'
 import { UserPassword } from '../../../entities/User/password'
