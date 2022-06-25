@@ -9,11 +9,11 @@ export class GetAllTasksController {
 
   async handle (request: Request, response: Response): Promise<Response> {
     const userId = request.headers.userID
-    const { isDone } = request.params
+    const isDone = request.query.done
     const taskQuery: ITaskQuery = {
-      userId: userId as string,
-      isDone: isDone || undefined
+      userId: userId as string
     }
+    if (isDone) taskQuery.isDone = isDone as string
     try {
       const tasks = await this.getAllTasksByUserUseCase.execute(taskQuery)
       return response.status(200).send({ tasks })
