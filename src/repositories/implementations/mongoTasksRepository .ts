@@ -1,5 +1,5 @@
 import { Task } from '../../entities/Task/Task'
-import { ITasksRepository } from '../interfaces/tasksRepository'
+import { ITaskQuery, ITasksRepository } from '../interfaces/tasksRepository'
 import TaskModel from '../mongodb/models/TasksModel'
 
 export class MongoTasksRepository implements ITasksRepository {
@@ -14,8 +14,8 @@ export class MongoTasksRepository implements ITasksRepository {
     return task
   }
 
-  async index (userId: string): Promise<unknown> {
-    const tasks = await TaskModel.find({ userId }).select({ _id: 0, __v: 0 })
+  async index (taskQuery: ITaskQuery): Promise<unknown> {
+    const tasks = await TaskModel.find(taskQuery).select({ _id: 0, __v: 0 })
     return tasks
   }
 

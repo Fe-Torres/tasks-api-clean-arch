@@ -1,27 +1,30 @@
 import { FindByIdTaskUseCase } from '../../../src/useCases/tasksUseCase/findByIdTask/findByIdTaskUseCase'
 import { GetAllTasksByUserUseCase } from '../../../src/useCases/tasksUseCase/getAllTasksbyUser/getAllTasksUseCaseByUser'
-import { taskRepositoryMock, taskRepositoryMockWithError } from './mocks/taskMocks'
+import { taskQuery, taskRepositoryMock, taskRepositoryMockWithError } from './mocks/taskMocks'
 
 describe('get all tasks by user example ', () => {
   const getAllTasksUseCase = new GetAllTasksByUserUseCase(taskRepositoryMock)
 
   test('shoud be able find task', async () => {
-    const taskResult = await getAllTasksUseCase.execute('1')
+    const taskResult = await getAllTasksUseCase.execute(taskQuery)
     expect(taskResult).toEqual([
       {
         title: 'Pular fogueira',
         description: 'Dia 24 e dia 25!',
-        userId: '1'
+        userId: '1',
+        isDone: false
       },
       {
         title: 'Comer bolo de aipim',
         description: 'Dia 24 e dia 25!',
-        userId: '1'
+        userId: '1',
+        isDone: false
       },
       {
         title: 'Dançar quadrilha',
         description: 'Dia 24 e dia 25!',
-        userId: '1'
+        userId: '1',
+        isDone: false
       }])
     expect(taskRepositoryMock.index).toBeCalled()
   })

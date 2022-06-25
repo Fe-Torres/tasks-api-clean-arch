@@ -1,12 +1,12 @@
-import { ITasksRepository } from '../../../repositories/interfaces/tasksRepository'
+import { ITaskQuery, ITasksRepository } from '../../../repositories/interfaces/tasksRepository'
 
 export class GetAllTasksByUserUseCase {
   constructor (
     private taskRepository: ITasksRepository
   ) {}
 
-  async execute (userId: string): Promise<unknown> {
-    const tasks = await this.taskRepository.index(userId)
+  async execute (taskQuery: ITaskQuery): Promise<unknown> {
+    const tasks = await this.taskRepository.index(taskQuery)
     return tasks
   }
 }

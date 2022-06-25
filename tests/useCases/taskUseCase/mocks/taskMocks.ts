@@ -1,25 +1,33 @@
 /* eslint-disable no-undef */
 import { ITaskRequestDTO } from '../../../../src/useCases/tasksUseCase/createTask/createTaskDTO'
-import { ITasksRepository } from '../../../../src/repositories/interfaces/tasksRepository'
+import { ITaskQuery, ITasksRepository } from '../../../../src/repositories/interfaces/tasksRepository'
 import { Error } from 'mongoose'
 
 const tasksArrayMock: ITaskRequestDTO[] = [
   {
     title: 'Pular fogueira',
     description: 'Dia 24 e dia 25!',
-    userId: '1'
+    userId: '1',
+    isDone: false
   },
   {
     title: 'Comer bolo de aipim',
     description: 'Dia 24 e dia 25!',
-    userId: '1'
+    userId: '1',
+    isDone: false
   },
   {
     title: 'Dançar quadrilha',
     description: 'Dia 24 e dia 25!',
-    userId: '1'
+    userId: '1',
+    isDone: false
   }
 ]
+
+export const taskQuery: ITaskQuery = {
+  userId: '1',
+  isDone: 'false'
+}
 
 export const taskMock: ITaskRequestDTO = {
   title: 'Pular fogueira',
